@@ -1,0 +1,356 @@
+@font-face{
+  src:url("blueberry/Blueberry\ .ttf");
+  font-family:"title";
+}
+
+*{
+    font-family: 'Noto Sans KR', sans-serif;
+    list-style:none;
+    text-decoration: none;
+    border-collapse: collapse;
+    margin:0;
+    padding:0;
+    color:black;
+    box-sizing: border-box;
+}
+
+body{
+    background-color:blanchedalmond;
+    display:flex;
+
+}
+
+#phone {
+    color: black;
+    background-image:url('image/lockedimage2.jpg');
+    width: 500px;
+    height: 855px;
+    border-radius: 50px;
+    border: solid 15px currentColor;
+    position: absolute;
+    top:5%;
+    left:36%;
+    right:36%;
+    bottom:5%;
+  }
+
+  #company{
+      color:white;
+      font-size:10pt;
+      font-weight:lighter;
+      position:absolute;
+      top:1%;
+      left:2%;
+  }
+
+#lockIcon{
+    color:white;
+    position: absolute;
+    left:47%;
+    top:8%;
+    width: 30px;
+    height: 22px;
+    border-radius: 3px;
+    border: solid 3px currentColor;
+}
+
+#lockIcon:before {
+    content: '';
+    position: absolute;
+    left: 3px;
+    top: -15px;
+    width: 10px;
+    height: 12px;
+    border-radius: 6px 6px 0 0;
+    border-top: solid 3px currentColor;
+    border-left: solid 3px currentColor;
+    border-right: solid 3px currentColor;
+  }
+
+
+  .my-transparent-button {
+    background-color: transparent !important;
+    background-image: none !important;
+    border-color: transparent;
+    border: none;
+
+    color: #FFFFFF;
+}
+
+#powerButton{
+    position: absolute;
+    left:48%;
+    bottom:10%;
+    width: 13px;
+    height: 13px;
+}
+
+#open{
+    font-size:40px;
+    color:white;
+    border:0;
+    outline:0;
+}
+
+#wifi{
+    color:white;
+    position: absolute;
+    right:20%;
+    top:2%;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    border-top: solid 2px currentColor;
+    border-right: solid 2px transparent;
+    border-bottom: solid 2px transparent;
+    border-left: solid 2px transparent;
+}
+
+
+#wifi:after {
+    content: '';
+    position: absolute;
+    left: -12px;
+    top: -10px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border-top: solid 2px currentColor;
+    border-right: solid 2px transparent;
+    border-bottom: solid 2px transparent;
+    border-left: solid 2px transparent;
+  }
+  
+  #wifi:before {
+    content: '';
+    position: absolute;
+    left: -8px;
+    top: -6px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border-top: solid 2px currentColor;
+    border-right: solid 2px transparent;
+    border-bottom: solid 2px transparent;
+    border-left: solid 2px transparent;
+  }
+
+  #battery {
+    color:white;
+    position: absolute;
+    top:1%;
+    right:13%;
+    width: 20px;
+    height: 11px;
+    border-radius: 2px;
+    border: solid 1px currentColor;
+  }
+
+  #battery:after {
+    content: '';
+    position: absolute;
+    left: 1px;
+    top: 1px;
+    width: 12px;
+    height: 8px;
+    background-color: currentColor;
+  }
+  
+  #battery:before {
+    content: '';
+    position: absolute;
+    right: -3px;
+    top: 1px;
+    width: 3px;
+    height: 5px;
+    border-radius: 0 2px 2px 0;
+    border-top: solid 1px currentColor;
+    border-right: solid 1px currentColor;
+    border-bottom: solid 1px currentColor;
+  }
+
+  #cameraLens {
+    color: #000;
+    position: absolute;
+    top:0.5%;
+    right:6%;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: solid 5px currentColor;
+  }
+
+  #call{
+      position:absolute;
+      left:2%;
+      bottom:1%;
+  }
+
+  #camera{
+      position:absolute;
+      right:2%;
+      bottom:1%;
+  }
+
+  #clock{
+      color:white;
+      position: absolute;
+      top:25%;
+      left:33%;
+      font-size:50pt;
+  }
+
+  #unlockClock{
+    color:white;
+    position:absolute;
+    top:1%;
+    left:30%;
+    font-size:10pt;
+  }
+
+  #menu{
+    position:absolute;
+    bottom:0%;
+    left:4%;
+  }
+
+  #aboutme{
+    position: absolute;
+    bottom:25%;
+    left:8%;
+  }
+
+  #aboutmeButton{
+    border:0;
+    outline:0;
+  }
+
+  #sns{
+    position:absolute;
+    bottom:25%;
+    left: 30%;
+  }
+
+  #snsButton{
+    border:0;
+    outline:0;
+  }
+
+  #everytime{
+    position:absolute;
+    bottom:25%;
+    left:52%;
+  }
+
+  #everytimeButton{
+    border:0;
+    outline:0;
+  }
+
+  #myweb{
+    position:absolute;
+    bottom:25%;
+    left:74%;
+  }
+
+  #mywebButton{
+    border:0;
+    outline:0;
+  }
+
+  #searchbar{
+    position: absolute;
+    bottom:35%;
+    left:0%;
+  }
+
+  #aboutmeScreen{
+    background-color: white;
+    position:absolute;
+    top:0.3%;
+    left:0.5%;
+    overflow:hidden;
+  }
+
+  #snsScreen{
+    background-color:#8ac6d1;
+    position:absolute;
+    top:0.3%;
+    left:0.5%;
+    overflow:hidden;
+  }
+
+  #scheduleScreen{
+    background-color: white;
+    position:absolute;
+    top:0.3%;
+    left:0.5%;
+    overflow:hidden;
+  }
+
+  #mywebScreen{
+    background-color: #ffb6b9;
+    position:absolute;
+    top:0.3%;
+    left:0.5%;
+    overflow:hidden;
+  }
+
+#exit{
+  position:absolute;
+  bottom: 20%;
+  left:15%;
+}
+
+#exit2{
+  position:absolute;
+  bottom: 20%;
+  left:40%;
+}
+
+#exit3{
+  position:absolute;
+  bottom: 10%;
+  left:70%;
+}
+
+#exit4{
+  position:absolute;
+  bottom: 1%;
+  left:75%;
+}
+
+
+#exitButton{
+  font-size:20pt;
+}
+
+#date{
+  color:white;
+  position: absolute;
+  top:35%;
+  left:39%;
+  font-size:15pt;
+}
+
+#ment{
+  position: absolute;
+  top:3%;
+  left:3%;
+  font-size:60px;
+  font-family:title;
+  color:#0a0a23;
+  text-shadow:slategrey 1px 1px;
+}
+
+#lockedMent{
+  position: absolute;
+  bottom: 12%;
+  left:8%;
+  font-size:15pt;
+  font-weight:bold;
+  font-style: italic;
+  font-family: 'Krona One', sans-serif;
+  color:#3e91b5;
+  text-shadow:slategrey 1px 1px;
+}

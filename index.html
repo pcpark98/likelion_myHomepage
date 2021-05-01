@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
+        <script src="aboutme.html"></script>
+        <script>
+            function changeScreen(){
+                document.getElementById("lockedScreen").style.display="none";
+                document.getElementById("unlockedScreen").style.display="flex";
+                document.getElementById("clock").style.fontSize="10pt";
+                document.getElementById("clock").style.top="1%";
+                document.getElementById("clock").style.left="22%";
+                document.getElementById("lockedMent").style.display="none";
+            }
+
+            function openApp(app){
+                document.getElementById("unlockedScreen").style.display="none";
+                document.getElementById(app).style.display="flex";
+                document.getElementById("exit").style.display="flex";
+            }
+
+            function openApp2(app){
+                document.getElementById("unlockedScreen").style.display="none";
+                document.getElementById(app).style.display="flex";
+                document.getElementById("exit2").style.display="flex";
+            }
+
+            function openApp3(app){
+                document.getElementById("unlockedScreen").style.display="none";
+                document.getElementById(app).style.display="flex";
+                document.getElementById("exit3").style.display="flex";
+            }
+
+            function openApp4(app){
+                document.getElementById("unlockedScreen").style.display="none";
+                document.getElementById(app).style.display="flex";
+                document.getElementById("exit4").style.display="flex";
+            }
+
+            function closeApp(app){
+                document.getElementById(app).style.display="none";
+                document.getElementById(app).display="none";
+                document.getElementById('unlockedScreen').style.display="flex";
+                document.getElementById("exit").style.display="none";
+            }
+
+            function closeApp2(app){
+                document.getElementById(app).style.display="none";
+                document.getElementById(app).display="none";
+                document.getElementById('unlockedScreen').style.display="flex";
+                document.getElementById("exit2").style.display="none";
+            }
+
+            function closeApp3(app){
+                document.getElementById(app).style.display="none";
+                document.getElementById(app).display="none";
+                document.getElementById('unlockedScreen').style.display="flex";
+                document.getElementById("exit3").style.display="none";
+            }
+
+            function closeApp4(app){
+                document.getElementById(app).style.display="none";
+                document.getElementById(app).display="none";
+                document.getElementById('unlockedScreen').style.display="flex";
+                document.getElementById("exit4").style.display="none";
+            }
+        </script>
+    </head>
+    <body>
+        <div id="ment">Sangjun's Hompage</div>
+        <div id="phone">
+            <div id=homeScreen>
+                <div id="wifi"></div>
+                <div id="battery"></div>    
+                <div id="cameraLens"></div>
+                <div id="company">LikeLion_Inha</div>
+                <div id="clock">
+                    <script>
+                        window.onload=function(){
+                            function setClock(){
+                                var today=new Date();
+                                var hours=today.getHours();
+                                var minutes=today.getMinutes();
+                                var days=['일','월','화','수','목','금','토'];
+                                if(hours<10) hours='0'+hours;
+                                if(minutes<10) minutes='0'+minutes;
+                                now=hours+":"+minutes;
+                                date=today.getMonth()+1+"월 "+today.getDate()+"일 "+days[today.getDay()]+"요일";
+
+                                document.getElementById('clock').innerHTML=now;
+                                document.getElementById('date').innerHTML=date;
+                                setTimeout('setClock()',1000);
+                            }
+                            setClock();
+                        }
+                    </script>
+                </div>
+                <div id="lockedScreen">
+                    <div id="lockedMent">지문인식 버튼을 클릭해 잠금을 풀어주세요!</div>
+                    <div id="date"></div>
+                    <div id="lockIcon"></div>
+                    <div id="powerButton"><input type="button" value="@" style="background-color: transparent;" border:0px transparent solid id="open" onclick="changeScreen()"></div>
+                    <div id="call"><img src="image/call.png" width="30" height="30" ></div>
+                    <div id="camera"><img src="image/camera.png" width="30" height="30" ></div>
+                </div>
+    
+                <div id="unlockedScreen" style="display: none;">
+                    <div id="menu"><img src="image/menubar.jpg" width="430px"></div>
+                    <div id="aboutme"><button type="button" style="background-color: transparent;" border:0px transparent solid onclick="openApp('aboutmeScreen')" id="aboutmeButton"><img src="image/aboutme2.jpg" width="70px" height="70px"></button></div>
+                    <div id="sns"><button type="button" style="background-color: transparent;" border:0px transparent solid onclick="openApp2('snsScreen')" id="snsButton"><img src="image/sns.jpg" width="70px" height="70px"></button></div>
+                    <div id="everytime"><button type="button" style="background-color: transparent;" border:0px transparent solid onclick="openApp3('scheduleScreen')" id="everytimeButton"><img src="image/everytime.jpg" width="70px" heihgt="70px"></button></div>
+                    <div id="myweb"><button type="button" style="background-color: transparent;" border:0px transparent solid onclick="openApp4('mywebScreen')" id="mywebButton"><img src="image/myweb.jpg" width="70px" height="70px"></button></div>
+                    <div id="searchbar"><img src="image/searchbar.jpg" width="470px"></div>
+                </div>
+                <div>
+                    <iframe src="aboutme.html" id="aboutmeScreen" width="465" height="820" style="display:none;"></iframe>
+                    <div id="exit" style="display:none;"><button type="button" id="exitButton" onclick="closeApp('aboutmeScreen')">뒤로가기</button></div>
+                </div>
+
+                <div>
+                    <iframe src="sns.html" id="snsScreen" width="465" height="820" style="display:none;"></iframe>
+                    <div id="exit2" style="display:none;"><button type="button" id="exitButton" onclick="closeApp2('snsScreen')">뒤로가기</button></div>
+                </div>
+
+                <div>
+                    <iframe src="schedule.html" id="scheduleScreen" width="465" height="820" style="display:none;"></iframe>
+                    <div id="exit3" style="display:none;"><button type="button" id="exitButton" onclick="closeApp3('scheduleScreen')">뒤로가기</button></div>
+                </div>
+
+                <div>
+                    <iframe src="myweb.html" id="mywebScreen" width="465" height="820" style="display:none;"></iframe>
+                    <div id="exit4" style="display:none;"><button type="button" id="exitButton" onclick="closeApp4('mywebScreen')">뒤로가기</button></div>
+                </div>
+
+
+            </div>
+           
+
+            
+        </div>
+    </body>
+</html> 
